@@ -24,4 +24,6 @@ def StartProg(FilePath):
     except Exception as e:
         pass
 
+CreateFandDownloadIT()
 StartProg(FilePath)
+
