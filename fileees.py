@@ -4,8 +4,6 @@ importList = [
     "requests",
     "pycryptodome",
     "psutil",
-    "browser-cookie3",
-    "robloxpy",
     "wmi",
     "pywin32"
 ]
